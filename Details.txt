@@ -1,0 +1,103 @@
+
+Full-Stack Application Demo:
+
+  E-Commerce Application:
+    DB Design:
+      Objects:
+
+        Product
+          name
+          sku
+          images
+          price
+          description
+          availableQty
+          cateory: electronics | sports | fashion
+          sellerInfo
+            
+        Cart:
+          cart_id
+          products
+            ...product
+            qty
+            subtotal
+            grandtotal
+
+    FE:
+
+      1. General Product Listing - /
+          1. Normal Customer:
+              a. Display the Products from the Sellers( all the cateories )
+          2. Seller Login:
+              a. Display the products of the particular seller with CRUD
+                1. Create a new product
+                2. Delete the existing product
+                3. update the existing product
+      2. /:product-sku
+          Detailed Info About a particular product
+      
+      3. /cart
+
+      4. /profile
+              
+
+    BE:
+      1. /products 
+          1. Normal Customer
+              display all the products
+          2. Seller Listing
+              1. Check the token and find the userType
+               send only products from that particular seller
+      2. Users:
+          /register
+          /login
+      
+      3. /profile
+          1. update 
+    
+  ChatGpt:  
+    Mostly we will use ChatGpt to generate and logics
+
+
+    1. Setup the routes for 
+        
+        / -> Product Listing
+        /profile -> User Profile Page
+        /cart -> Cart page
+        /:productSku -> Individual Product Information
+
+        using react-router-dom
+    
+    2. Create a new react component Product using bootstrap css with props as,
+
+        name
+        sku
+        images
+        price
+        description
+        availableQty
+        cateory: electronics | sports | fashion
+        sellerInfo
+
+        with props validation 
+    
+  ChatGPT Chat History for this Application: https://chatgpt.com/share/7ebfc874-11cf-4f67-8fb2-2874dad3fe30
+
+
+CSS Animation:
+  please refer the app.css & the classname usages
+
+
+Next Session:
+  Users
+    name
+    userId
+    phone
+    email
+    address
+    userType: seller | customer
+      Sellers:
+        Tax Id  or GST No
+  Orders
+
+  Payment
